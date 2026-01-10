@@ -9,3 +9,5 @@ function Customer() {
 }
 
 export default Customer;
+
+// May need to extrapolate for more customer info here via non state methods
