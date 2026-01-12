@@ -30,4 +30,6 @@ function Customer() {
   );
 }
 
+// Add Group Customers as well?
+
 export default Customer;
