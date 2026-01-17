@@ -9,16 +9,21 @@ function Customer() {
   const dispatch = useDispatch();
 
   function handleClick() {
+    if (!fullName || !nationalId) return;
 
-    if(!fullName || !nationalId) return;
-
-    dispatch(createCustomer(fullName, nationalId));
+    dispatch(
+      createCustomer({
+        fullName,
+        nationalId,
+        createdAt: new Date().toISOString(),
+      }),
+    );
   }
 
   return (
     <div>
       <h2>Create new customer</h2>
-      <div className="inputs">
+      <div className='inputs'>
         <div>
           <label>Customer full name</label>
           <input
